@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
+import ContactForm from './ContactForm'
 
 const Portfolio = () => {
   const personalInfo = {
@@ -172,18 +173,11 @@ const Portfolio = () => {
         >
           <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-6 text-center">Get In Touch</h2>
-            <p className="text-gray-300 text-center mb-6">
+            <p className="text-gray-300 text-center mb-8">
               I'm always open to discussing new opportunities and interesting projects.
             </p>
-            <div className="text-center">
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="inline-flex items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
-              >
-                <Mail size={20} />
-                <span>Contact Me</span>
-              </a>
-            </div>
+            
+            <ContactForm />
           </div>
         </motion.section>
 
