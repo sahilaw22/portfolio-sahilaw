@@ -1,22 +1,22 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# Set Git user config
+# Git global config
 git config --global user.name "sahilaw22"
 git config --global user.email "sahilwan064@gmail.com"
 
-# Move to your project folder
-cd ~/portfolio-sahilaw || { echo "❌ Folder not found!"; exit 1; }
+# Navigate to your repo
+cd ~/portfolio-sahilaw || { echo "❌ Project folder not found!"; exit 1; }
 
-# Show changes
+# Show file changes
 git status
 
-# Stage all changes
+# Stage everything
 git add .
 
-# Commit with message
+# Get commit message
 echo -n "📦 Enter commit message: "
 read commitMessage
-git commit -m "$commitMessage"
 
-# Push to GitHub (manual login required)
+# Commit and push
+git commit -m "$commitMessage"
 git push origin main
